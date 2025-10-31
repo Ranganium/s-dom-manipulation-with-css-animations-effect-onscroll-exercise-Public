@@ -53,18 +53,23 @@ soundHorse.src = "../sound/horse-sound.mp3";
 if (bearImage) {
   bearImage.addEventListener("click", () => {
     soundBear.play();
+    bearImage.classList.remove("animate");
+    bearImage.classList.toggle("anim-scale");
   });
-  if (bearImage) {
 }
 
 if (dogImage) {
   dogImage.addEventListener("click", () => {
-    soundDog.play(), dogElem.classList.add("anim-scale");
+    soundDog.play();
+    dogImage.classList.remove("animate");
+    dogImage.classList.toggle("anim-scale");
   });
 }
 
 if (horseImage) {
   horseImage.addEventListener("click", () => {
-    soundHorse.play(), horseElem.classList.add("anim-scale");
+    soundHorse.play();
+    horseImage.classList.remove("animate");
+    horseImage.classList.toggle("anim-scale");
   });
 }
