@@ -44,7 +44,7 @@ const dogImage = document.getElementById("dogElem");
 const horseImage = document.getElementById("horseElem");
 
 const soundBear = new Audio();
-soundBear.src = "/sound/bear-sound.mp3";
+soundBear.src = "../sound/bear-sound.mp3";
 const soundDog = new Audio();
 soundDog.src = "../sound/dog-sound.mp3";
 const soundHorse = new Audio();
@@ -53,7 +53,7 @@ soundHorse.src = "../sound/horse-sound.mp3";
 if (bearImage) {
   bearImage.addEventListener("click", () => {
     soundBear.play();
-    bearImage.classList.remove("animate");
+    bearImage.classList.toggle("animate");
     bearImage.classList.toggle("anim-scale");
   });
 }
@@ -61,7 +61,7 @@ if (bearImage) {
 if (dogImage) {
   dogImage.addEventListener("click", () => {
     soundDog.play();
-    dogImage.classList.remove("animate");
+    dogImage.classList.toggle("animate");
     dogImage.classList.toggle("anim-scale");
   });
 }
@@ -69,7 +69,44 @@ if (dogImage) {
 if (horseImage) {
   horseImage.addEventListener("click", () => {
     soundHorse.play();
-    horseImage.classList.remove("animate");
+    horseImage.classList.toggle("animate");
     horseImage.classList.toggle("anim-scale");
+  });
+}
+
+const iroh = document.getElementById("iroh");
+const zuko = document.getElementById("zuko");
+
+const soundIroh = new Audio();
+soundIroh.src = "../sound/hot-leaf-juice.mp3";
+
+const soundZuko = new Audio();
+soundZuko.src = "../sound/thats-rough-buddy.mp3";
+
+let swapped = false;
+
+function swapImages() {
+  swapped = !swapped;
+
+  if (swapped) {
+    iroh.classList.add("swapped-right");
+    zuko.classList.add("swapped-left");
+  } else {
+    iroh.classList.remove("swapped-right");
+    zuko.classList.remove("swapped-left");
+  }
+}
+
+if (iroh) {
+  iroh.addEventListener("click", () => {
+    swapImages();
+    soundIroh.play();
+  });
+}
+
+if (zuko) {
+  zuko.addEventListener("click", () => {
+    swapImages();
+    soundZuko.play();
   });
 }
