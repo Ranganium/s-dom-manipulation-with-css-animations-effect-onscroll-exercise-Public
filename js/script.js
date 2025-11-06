@@ -83,18 +83,9 @@ soundIroh.src = "../sound/hot-leaf-juice.mp3";
 const soundZuko = new Audio();
 soundZuko.src = "../sound/thats-rough-buddy.mp3";
 
-let swapped = false;
-
 function swapImages() {
-  swapped = !swapped;
-
-  if (swapped) {
-    iroh.classList.add("swapped-right");
-    zuko.classList.add("swapped-left");
-  } else {
-    iroh.classList.remove("swapped-right");
-    zuko.classList.remove("swapped-left");
-  }
+  iroh.classList.toggle("swapped-right");
+  zuko.classList.toggle("swapped-left");
 }
 
 if (iroh) {
