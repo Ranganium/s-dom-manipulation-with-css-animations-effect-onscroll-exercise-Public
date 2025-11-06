@@ -44,11 +44,11 @@ const dogImage = document.getElementById("dogElem");
 const horseImage = document.getElementById("horseElem");
 
 const soundBear = new Audio();
-soundBear.src = "../sound/bear-sound.mp3";
+soundBear.src = "./../sound/bear-sound.mp3";
 const soundDog = new Audio();
-soundDog.src = "../sound/dog-sound.mp3";
+soundDog.src = "./../sound/dog-sound.mp3";
 const soundHorse = new Audio();
-soundHorse.src = "../sound/horse-sound.mp3";
+soundHorse.src = "./../sound/horse-sound.mp3";
 
 if (bearImage) {
   bearImage.addEventListener("click", () => {
@@ -78,10 +78,10 @@ const iroh = document.getElementById("iroh");
 const zuko = document.getElementById("zuko");
 
 const soundIroh = new Audio();
-soundIroh.src = "../sound/hot-leaf-juice.mp3";
+soundIroh.src = "./../sound/hot-leaf-juice.mp3";
 
 const soundZuko = new Audio();
-soundZuko.src = "../sound/thats-rough-buddy.mp3";
+soundZuko.src = "./../sound/thats-rough-buddy.mp3";
 
 function swapImages() {
   iroh.classList.toggle("swapped-right");
