@@ -77,11 +77,9 @@ if (horseImage) {
 const iroh = document.getElementById("iroh");
 const zuko = document.getElementById("zuko");
 
-const soundIroh = new Audio();
-soundIroh.src = "./../sound/hot-leaf-juice.mp3";
+const soundIroh = new Audio("./../sound/hot-leaf-juice.mp3");
 
-const soundZuko = new Audio();
-soundZuko.src = "./../sound/thats-rough-buddy.mp3";
+const soundZuko = new Audio("./../sound/thats-rough-buddy.mp3");
 
 function swapImages() {
   iroh.classList.toggle("swapped-right");
